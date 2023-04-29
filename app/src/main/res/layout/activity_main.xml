@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/flstart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="VisualLintBounds" />
+
+    <FrameLayout
+        android:id="@+id/flstart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/item_circular_accent_boarder"
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image"
+            android:fontFamily="@font/lexend_zetta"
+            android:gravity="center"
+            android:text="@string/start"
+            android:textColor="#EF6C00"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBMI"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/item_circular_color_accent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flstart">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image"
+            android:fontFamily="@font/lexend_zetta"
+            android:gravity="center"
+            android:text="@string/bmi"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints,TextContrastCheck" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_zetta"
+        android:text="@string/calculate"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flBMI"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/flHistory"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/item_circular_color_accent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flstart">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="43dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/calendar"
+            app:srcCompat="@drawable/history_icon"
+            tools:ignore="VisualLintBounds" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_zetta"
+        android:text="@string/history"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flHistory"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
